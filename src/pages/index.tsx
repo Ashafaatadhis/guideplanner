@@ -8,7 +8,7 @@ import { Yellowtail, Poppins } from "next/font/google";
 import { HiLocationMarker } from "react-icons/hi";
 // import styles from "@/styles/Home.module.css";
 import NavigationBar from "./components/NavigationBar";
-import { Container } from "./components/Container";
+import Container from "./components/Container";
 import { Rating } from "react-daisyui";
 
 const yellowTail = Yellowtail({

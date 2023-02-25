@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "react-daisyui";
-import { Container } from "./Container";
+import Container from "./Container";
 import { VscAccount } from "react-icons/vsc";
 
 const NavigationBar = ({ children }: { children: React.ReactNode }) => {
