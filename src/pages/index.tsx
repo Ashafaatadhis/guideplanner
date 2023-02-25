@@ -29,7 +29,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <NavigationBar>
-                <section className="-mt-[78px] flex h-screen w-full items-center justify-center bg-[url('/assets/img/bg.png')] bg-cover">
+                <section className="-mt-[64px] flex h-screen w-full items-center justify-center bg-[url('/assets/img/bg.png')] bg-cover">
                     {/* <Image
                         className="absolute top-0 h-screen w-full"
                         src={"/assets/img/bg.png"}
