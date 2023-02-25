@@ -1,8 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
+import { FaUsers } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
+import { BsSun } from "react-icons/bs";
+import { BiSearch } from "react-icons/bi";
 import { Yellowtail, Poppins } from "next/font/google";
+import { HiLocationMarker } from "react-icons/hi";
 // import styles from "@/styles/Home.module.css";
 import NavigationBar from "./components/NavigationBar";
+import { Container } from "./components/Container";
+import { Rating } from "react-daisyui";
 
 const yellowTail = Yellowtail({
     weight: "400",
@@ -29,7 +36,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <NavigationBar>
-                <section className="-mt-[64px] flex h-screen w-full items-center justify-center bg-[url('/assets/img/bg.png')] bg-cover">
+                <section className="-mt-[64px] flex h-screen w-full items-center justify-center border-0 bg-[url('/assets/img/bg.png')] bg-cover">
                     {/* <Image
                         className="absolute top-0 h-screen w-full"
                         src={"/assets/img/bg.png"}
@@ -38,16 +45,156 @@ export default function Home() {
                         height={627}
                     /> */}
                     <h1
-                        className={`text-[100px] text-white ${yellowTail.className}`}
+                        className={`text-[128px] text-white ${yellowTail.className}`}
                     >
                         The journey. It matters.
                     </h1>
-                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-20  bg-gradient-to-t from-white"></div>
                 </section>
-                <section className="">
-                    <h1 className="text-center text-[36px] font-bold">
-                        Our Services
-                    </h1>
+                <section>
+                    <Container className="w-full px-12">
+                        <h1 className="mt-6 text-center text-[36px] font-bold">
+                            Our Services
+                        </h1>
+                        <div className="mt-6 grid grid-cols-3 gap-14">
+                            <div className="h-[211px] rounded-[15px] bg-[#f5f5f5] p-5 shadow-md">
+                                <div className="mt-6 flex items-center gap-5 pl-5">
+                                    <FaUsers className=" text-[32px] text-[#00CE31]" />
+                                    <p className="text-center text-[24px] font-bold">
+                                        Guide booking
+                                    </p>
+                                </div>
+                                <p className="mt-6">
+                                    We provide you the best guide you can get to
+                                    make your trip even better.
+                                </p>
+                            </div>
+                            <div className="rounded-[15px] bg-[#f5f5f5] p-5 shadow-md">
+                                <div className="mt-6 flex items-center gap-5 pl-5">
+                                    <FiSend
+                                        className=" text-[32px] text-[#E48B78]
+                                "
+                                    />
+                                    <p className="text-center text-[24px] font-bold">
+                                        Tour Plan
+                                    </p>
+                                </div>
+                                <p className="mt-6">
+                                    We provide you the best plan within a short
+                                    time explore more.
+                                </p>
+                            </div>
+                            <div className="rounded-[15px] bg-[#f5f5f5] p-5 shadow-md">
+                                <div className="mt-6 flex items-center gap-5 pl-5">
+                                    <BsSun
+                                        className=" text-[32px] text-[#00B8E0]
+                                "
+                                    />
+                                    <p className="text-center text-[24px] font-bold">
+                                        Custom Itinerary
+                                    </p>
+                                </div>
+                                <p className="mt-6">
+                                    Bla bla bla make custom itinerary together!
+                                </p>
+                            </div>
+                        </div>
+                    </Container>
+                </section>
+                <section className="relative mt-3 bg-[#9BD0D0]">
+                    <div className="relative right-0 left-0 top-0 h-10 bg-gradient-to-t from-[#9BD0D0] to-white"></div>
+                    <Container className="w-full px-12 py-12 ">
+                        <div className="flex h-[500px] w-full flex-col items-center bg-[#f7ffff] bg-[url('/assets/img/map.png')] bg-cover bg-blend-multiply">
+                            <h1
+                                className={`${poppins.className} mt-10 text-[32px]`}
+                            >
+                                Plan your next trip with us us
+                            </h1>
+                            <div className="mt-2 flex w-[50%] items-center gap-4">
+                                <div className="flex w-full items-center">
+                                    <button className="flex h-[40px] items-center gap-3 rounded-l-[20px] border-0 bg-white pl-6 pr-3 text-[20px] leading-none text-[#AEAEAE] shadow-md">
+                                        <BiSearch />
+                                    </button>
+                                    <input
+                                        type="text"
+                                        placeholder="Search..."
+                                        className="h-[40px] w-full rounded-[20px] rounded-l-none shadow-md"
+                                    />
+                                </div>
+                                <button className="h-10 w-10  rounded-full bg-[#61D9FF]"></button>
+                            </div>
+                        </div>
+                        <Container className="mx-10 -mt-[130px]">
+                            <h1
+                                className={` text-[40px] font-semibold ${poppins.className}`}
+                            >
+                                Available Guide
+                            </h1>
+                            <div className="mt-3 grid grid-cols-3 gap-10">
+                                {new Array(3).fill(0).map((_, i) => (
+                                    <div
+                                        key={i}
+                                        className="flex gap-5 rounded-[10px] bg-white p-4"
+                                    >
+                                        <Image
+                                            alt="guide"
+                                            src="/assets/img/guide.png"
+                                            width={109}
+                                            height={190}
+                                        />
+                                        <div
+                                            className={`${poppins.className} flex flex-col justify-between pb-5`}
+                                        >
+                                            <div className="flex flex-col gap-1">
+                                                <p className="text-[14px] text-[#AEAEAE]">
+                                                    Torres
+                                                </p>
+                                                <p className="font-semibold">
+                                                    Eding Dzeko
+                                                </p>
+                                                <Rating
+                                                    value={4}
+                                                    className="gap-1"
+                                                    size="sm"
+                                                >
+                                                    <Rating.Item
+                                                        name="rating-2"
+                                                        disabled
+                                                        className="mask mask-star-2 bg-orange-400"
+                                                    />
+                                                    <Rating.Item
+                                                        name="rating-2"
+                                                        disabled
+                                                        className="mask mask-star-2 bg-orange-400"
+                                                    />
+                                                    <Rating.Item
+                                                        name="rating-2"
+                                                        disabled
+                                                        className="mask mask-star-2 bg-orange-400"
+                                                    />
+                                                    <Rating.Item
+                                                        name="rating-2"
+                                                        disabled
+                                                        className="mask mask-star-2 bg-orange-400"
+                                                    />
+                                                </Rating>
+                                                <p className="flex items-center text-[14px]">
+                                                    <HiLocationMarker /> Bali
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p className="text-[14px] text-[#AEAEAE]">
+                                                    from
+                                                </p>
+                                                <p>Rp.300.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Container>
+                    </Container>
+                    <div className="relative right-0 left-0 bottom-0 h-10 bg-gradient-to-b from-[#9BD0D0] to-white"></div>
                 </section>
             </NavigationBar>
         </>
