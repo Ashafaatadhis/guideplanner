@@ -288,6 +288,146 @@ export default function Home() {
                     </Container>
                     <div className="relative right-0 left-0 bottom-0 h-10 bg-gradient-to-b from-[#9BD0D0] to-white"></div>
                 </section>
+                <section>
+                    <Container className="w-full px-12 py-24">
+                        <h1 className="mt-6 text-center text-[36px] font-bold">
+                            Best Plan
+                        </h1>
+                        <div className="flex justify-center gap-4 overflow-x-auto py-10 font-semibold ">
+                            <button className="h-[54px] w-[162px] rounded-lg bg-[#19DFDF] text-white">
+                                Bali
+                            </button>
+                            <button className="h-[54px] w-[162px] rounded-lg bg-[#666666] text-white ">
+                                Jakarta
+                            </button>
+                            <button className="h-[54px] w-[162px] rounded-lg bg-[#666666] text-white ">
+                                Lombok
+                            </button>
+                            <button className="h-[54px] w-[162px] rounded-lg bg-[#666666] text-white ">
+                                Yogyakarta
+                            </button>
+                            <button className="h-[54px] w-[162px] rounded-lg bg-[#666666] text-white ">
+                                Bandung
+                            </button>
+                            <button className="h-[54px] w-[162px] rounded-lg bg-[#666666] text-white ">
+                                Surabaya
+                            </button>
+                        </div>
+                        <div className="flex flex-wrap justify-evenly gap-[62px] px-20 pt-24">
+                            <div className="h-[360px] w-[300px] overflow-hidden rounded-t-xl bg-white text-justify shadow-2xl ">
+                                <Image
+                                    alt="Ubud"
+                                    src={"/assets/img/ubud.png"}
+                                    width={300}
+                                    height={200}
+                                    className="h-[182px] bg-cover object-cover"
+                                ></Image>
+                                <div className="px-2">
+                                    <div className="flex justify-between">
+                                        <p className="py-4 text-[14px] font-bold">
+                                            Full Week
+                                        </p>
+                                        <p className="py-4 text-[14px] font-bold">
+                                            RP.100.000/Person
+                                        </p>
+                                    </div>
+                                    <p className="pb-3 font-[14px]">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Eveniet, qui.
+                                    </p>
+                                    <div className="flex justify-between pb-3">
+                                        <p className="flex items-center text-[14px] font-bold">
+                                            <HiLocationMarker /> The Town of
+                                            Ubud
+                                        </p>
+                                        <p className="text-[14px] font-bold">
+                                            Know More
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="h-[360px] w-[300px] overflow-hidden rounded-t-xl bg-white text-justify shadow-2xl ">
+                                <Image
+                                    alt="Ubud"
+                                    src={"/assets/img/lot.png"}
+                                    width={300}
+                                    height={200}
+                                    className="h-[182px] bg-cover object-cover"
+                                ></Image>
+                                <div className="px-2">
+                                    <div className="flex justify-between">
+                                        <p className="py-4 text-[14px] font-bold">
+                                            3 Days, 2 Nights
+                                        </p>
+                                        <p className="py-4 text-[14px] font-bold">
+                                            RP.75.000/Person
+                                        </p>
+                                    </div>
+                                    <p className="pb-3 font-[14px]">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Sit, maiores!
+                                    </p>
+                                    <div className="flex justify-between pb-3">
+                                        <p className="flex items-center text-[14px] font-bold">
+                                            <HiLocationMarker /> Tanah Lot
+                                        </p>
+                                        <p className="text-[14px] font-bold">
+                                            Know More
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="h-[360px] w-[300px] overflow-hidden rounded-t-xl bg-white text-justify shadow-2xl ">
+                                <Image
+                                    alt="Ubud"
+                                    src={"/assets/img/uluwatu.png"}
+                                    width={300}
+                                    height={200}
+                                    className="h-[182px] bg-cover object-cover"
+                                ></Image>
+                                <div className="px-2">
+                                    <div className="flex justify-between">
+                                        <p className="py-4 text-[14px] font-bold">
+                                            5 Days, 3 Night
+                                        </p>
+                                        <p className="py-4 text-[14px] font-bold">
+                                            RP.100.000/Person
+                                        </p>
+                                    </div>
+                                    <p className="pb-3 font-[14px]">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nemo, delectus.
+                                    </p>
+                                    <div className="flex justify-between pb-3">
+                                        <p className="flex items-center text-[14px] font-bold">
+                                            <HiLocationMarker /> Uluwatu Temple
+                                        </p>
+                                        <p className="text-[14px] font-bold">
+                                            Know More
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-center py-10">
+                            <button className="h-[56px] w-[231px] rounded-xl bg-[#19DFDF] text-[20px] font-bold text-white">
+                                Discover More
+                            </button>
+                        </div>
+                    </Container>
+                </section>
+                <section>
+                    <Container className="w-full pb-20">
+                        <div className="flex h-[394px] w-full flex-col items-center justify-center bg-[url('/assets/img/book.png')] bg-cover object-contain">
+                            <h1 className="pb-5 text-[40px] font-bold text-white">
+                                Make your own itinerary
+                            </h1>
+                            <button className="h-[56px] w-[231px] rounded-lg bg-[#19DFDF] text-[20px] font-bold text-white">
+                                Book Now
+                            </button>
+                        </div>
+                    </Container>
+                </section>
             </NavigationBar>
         </>
     );
