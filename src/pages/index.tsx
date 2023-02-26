@@ -5,11 +5,15 @@ import { FiSend } from "react-icons/fi";
 import { BsSun } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
 import { Yellowtail, Poppins } from "next/font/google";
+
+import { RiHeartLine } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
 // import styles from "@/styles/Home.module.css";
 import NavigationBar from "./components/NavigationBar";
 import Container from "./components/Container";
 import { Rating } from "react-daisyui";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const yellowTail = Yellowtail({
     weight: "400",
@@ -19,6 +23,26 @@ const poppins = Poppins({
     weight: "400",
     subsets: ["latin"]
 });
+
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+};
 
 export default function Home() {
     return (
@@ -139,11 +163,64 @@ export default function Home() {
                             >
                                 Available Guide
                             </h1>
-                            <div className="mt-3 grid grid-cols-3 gap-10">
-                                {new Array(3).fill(0).map((_, i) => (
+
+                            {/* <div className="mt-3 grid grid-cols-3 gap-10"> */}
+                            <Carousel
+                                additionalTransfrom={0}
+                                arrows
+                                autoPlaySpeed={3000}
+                                centerMode={false}
+                                className="-mx-6  border-0 shadow-none outline-none"
+                                containerClass="container-with-dots"
+                                dotListClass=""
+                                focusOnSelect={false}
+                                ssr={true}
+                                itemClass=""
+                                keyBoardControl
+                                minimumTouchDrag={80}
+                                pauseOnHover
+                                renderArrowsWhenDisabled={false}
+                                renderButtonGroupOutside={false}
+                                renderDotsOutside={false}
+                                responsive={{
+                                    desktop: {
+                                        breakpoint: {
+                                            max: 3000,
+                                            min: 1024
+                                        },
+                                        items: 3,
+                                        partialVisibilityGutter: 40
+                                    },
+                                    mobile: {
+                                        breakpoint: {
+                                            max: 464,
+                                            min: 0
+                                        },
+                                        items: 1,
+                                        partialVisibilityGutter: 30
+                                    },
+                                    tablet: {
+                                        breakpoint: {
+                                            max: 1024,
+                                            min: 464
+                                        },
+                                        items: 2,
+                                        partialVisibilityGutter: 30
+                                    }
+                                }}
+                                rewind={false}
+                                rewindWithAnimation={false}
+                                rtl={false}
+                                shouldResetAutoplay
+                                showDots={false}
+                                sliderClass=""
+                                slidesToSlide={1}
+                                swipeable
+                            >
+                                {new Array(8).fill(0).map((_, i) => (
                                     <div
                                         key={i}
-                                        className="flex gap-5 rounded-[10px] bg-white p-4 shadow-md"
+                                        className="mx-6  flex gap-5 rounded-[10px] bg-white p-4"
                                     >
                                         <Image
                                             alt="guide"
@@ -198,9 +275,15 @@ export default function Home() {
                                                 <p>Rp.300.000</p>
                                             </div>
                                         </div>
+                                        <div className="flex flex-1 items-end justify-end">
+                                            <div className="flex items-center justify-center rounded-full border-[1px] p-3 text-[28px] leading-none text-[#61D9FF] shadow-md">
+                                                <RiHeartLine />
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
-                            </div>
+                            </Carousel>
+                            {/* </div> */}
                         </Container>
                     </Container>
                     <div className="relative right-0 left-0 bottom-0 h-10 bg-gradient-to-b from-[#9BD0D0] to-white"></div>
