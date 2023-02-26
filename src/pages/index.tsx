@@ -36,7 +36,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <NavigationBar>
-                <section className="-mt-[64px] flex h-screen w-full items-center justify-center border-0 bg-[url('/assets/img/bg.png')] bg-cover">
+                <section className="relative -mt-[64px] flex h-screen w-full items-center justify-center border-0 bg-[url('/assets/img/bg.png')] bg-cover">
                     {/* <Image
                         className="absolute top-0 h-screen w-full"
                         src={"/assets/img/bg.png"}
@@ -111,17 +111,26 @@ export default function Home() {
                                 Plan your next trip with us us
                             </h1>
                             <div className="mt-2 flex w-[50%] items-center gap-4">
-                                <div className="flex w-full items-center">
-                                    <button className="flex h-[40px] items-center gap-3 rounded-l-[20px] border-0 bg-white pl-6 pr-3 text-[20px] leading-none text-[#AEAEAE] shadow-md">
+                                <div className="flex w-full items-center rounded-[20px] shadow-md">
+                                    <button className="flex h-[40px] items-center gap-3 rounded-l-[20px]  bg-white pl-6   pr-3 text-[20px] leading-none text-[#AEAEAE] outline-none ">
                                         <BiSearch />
                                     </button>
                                     <input
                                         type="text"
                                         placeholder="Search..."
-                                        className="h-[40px] w-full rounded-[20px] rounded-l-none shadow-md"
+                                        className="h-[40px] w-full rounded-[20px] rounded-l-none "
                                     />
                                 </div>
                                 <button className="h-10 w-10  rounded-full bg-[#61D9FF]"></button>
+                            </div>
+
+                            <div className="flex w-full items-end justify-center ">
+                                <Image
+                                    src={"/assets/img/p.png"}
+                                    width={850}
+                                    height={270}
+                                    alt="pointer map"
+                                />
                             </div>
                         </div>
                         <Container className="mx-10 -mt-[130px]">
@@ -134,7 +143,7 @@ export default function Home() {
                                 {new Array(3).fill(0).map((_, i) => (
                                     <div
                                         key={i}
-                                        className="flex gap-5 rounded-[10px] bg-white p-4"
+                                        className="flex gap-5 rounded-[10px] bg-white p-4 shadow-md"
                                     >
                                         <Image
                                             alt="guide"
