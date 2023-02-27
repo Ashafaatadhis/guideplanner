@@ -220,7 +220,7 @@ export default function Home() {
                                 {new Array(8).fill(0).map((_, i) => (
                                     <div
                                         key={i}
-                                        className="mx-6  flex gap-5 rounded-[10px] bg-white p-4"
+                                        className="mx-6  flex gap-5 rounded-[10px] bg-white p-4 shadow-md"
                                     >
                                         <Image
                                             alt="guide"
@@ -288,7 +288,7 @@ export default function Home() {
                     </Container>
                     <div className="relative right-0 left-0 bottom-0 h-10 bg-gradient-to-b from-[#9BD0D0] to-white"></div>
                 </section>
-                <section>
+                <section className="bg-[url('/assets/img/world_map.png')] bg-cover">
                     <Container className="w-full px-12 py-24">
                         <h1 className="mt-6 text-center text-[36px] font-bold">
                             Best Plan
