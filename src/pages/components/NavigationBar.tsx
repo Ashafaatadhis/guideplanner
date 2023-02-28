@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "react-daisyui";
 import Container from "./Container";
+import { useRouter } from "next/router";
 import { VscAccount } from "react-icons/vsc";
+import SideCard from "./SideCard";
 
 const NavigationBar = ({ children }: { children: React.ReactNode }) => {
     const [isScroll, setIsScroll] = useState(false);
+    const router = useRouter();
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            scrollY ? setIsScroll(true) : setIsScroll(false);
-        });
+        router.pathname == "/"
+            ? window.addEventListener("scroll", () => {
+                  scrollY ? setIsScroll(true) : setIsScroll(false);
+              })
+            : setIsScroll(true);
     }, []);
     return (
         <div className="">
             <Navbar
-                className={`sticky top-0 left-0 right-0 z-10  leading-none transition-all ${
+                className={`sticky top-0 left-0 right-0 z-[5555]  leading-none transition-all ${
                     isScroll ? "bg-[#1DA1F2]" : "bg-transparent"
                 }  `}
             >
